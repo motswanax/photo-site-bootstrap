@@ -1,5 +1,5 @@
-"use strict";
-/* global $ */
+"use strict"
+/*global $;*/
 $(document).ready(function () {
   $('.nav-button').click(function () {
     $('.nav-button').toggleClass('change');
@@ -11,6 +11,19 @@ $(document).ready(function () {
       $('.nav-menu').addClass('custom-navbar');
     } else {
       $('.nav-menu').removeClass('custom-navbar');
+    }
+  });
+  
+  $(window).scroll(function () {
+    "use strict";
+    let position = $(this).scrollTop();
+    console.log(position);
+    if (position >= 650) {
+    	$('.camera-img').addClass('fromLeft');
+    	$('.mission-text').addClass('fromRight');
+    } else {
+    	$('.camera-img').removeClass('fromLeft');
+    	$('.mission-text').removeClass('fromRight');
     }
   });
 });
