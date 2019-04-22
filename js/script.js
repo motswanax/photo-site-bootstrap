@@ -1,4 +1,4 @@
-"use strict";
+"use strict"
 /*global $;*/
 $(document).ready(function () {
   $('.nav-button').click(function () {
@@ -17,7 +17,7 @@ $(document).ready(function () {
   $(window).scroll(function () {
     "use strict";
     let position = $(this).scrollTop();
-    // console.log(position);
+    console.log(position);
     if (position >= 650) {
     	$('.camera-img').addClass('fromLeft');
     	$('.mission-text').addClass('fromRight');
@@ -25,19 +25,5 @@ $(document).ready(function () {
     	$('.camera-img').removeClass('fromLeft');
     	$('.mission-text').removeClass('fromRight');
     }
-  });
-
-  $('.gallery-list-item').click(function() {
-    let value = $(this).attr('data-filter');
-    if(value === 'all') {
-      $('.filter').show(300);
-    } else {
-      $('.filter').not('.' + value).hide(300);
-      $('.filter').filter('.' + value).show(300);
-    }
-  });
-
-  $('.gallery-list-item').click(function () {
-    $(this).addClass('active-item').siblings().removeClass('active-item');
   });
 });
